@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<title>Form</title>    
+<head>
+    <style>
+        body{
+           background-image: url(bg.jpg);
+        }
+        h2{
+            font-family:cursive;
+            text-align:center;
+            margin:auto;
+            width:50%;
+            font-size:40px;
+            font-weight: bold;
+            color: rgb(70, 68, 68);
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(113, 6, 236), 0 0 5px rgb(199, 151, 245);
+        }
+        table{
+            border-collapse: collapse;
+            margin: auto;
+        }
+        tr:hover{
+            background-color:rgb(228, 191, 245);
+        }
+        tr:nth-child(even) {
+            background-color:rgb(224, 194, 220);
+        }
+        td:nth-child(n+1){
+            font-family:cursive;
+            text-align:center;
+            margin:auto;
+            width:50%;
+            font-size:20px;
+            font-weight: bold;
+            color: rgb(185, 3, 125);
+        }
+
+        td{
+            font-family:cursive;
+            font-size: large;
+            font-weight: bold;
+            color:rgb(47, 46, 48);
+           
+        }
+        input[type=text],input[type=date],input[type=Email-id],input[type=number],select {
+            font-family:cursive;
+            text-align:center;
+            margin:auto;
+            width:50%;
+            font-size:15px;
+            font-weight: bold;
+            color: rgb(185, 3, 125);
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+       }
+       ::placeholder {
+           color:rgb(218, 213, 216);
+        }
+       input:-webkit-autofill {
+           -webkit-text-fill-color:rgb(185, 3, 125);
+       }
+
+       .button{
+            background-color: #d9b0fa;
+            color:skyblue;
+            font-family:cursive;
+            font-size: large;
+            font-weight: bold;
+            border-radius: 15px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            color:rgb(91, 92, 91);
+            margin: 4px 2px;
+            cursor: pointer;
+            padding: 12px 28px;
+       }
+       input:focus{
+        outline: none;
+        box-shadow: 0px 0px 5px #e70505;
+        border-color:#e70505;
+      }
+
+      .button:hover {
+          box-shadow: 0 12px 16px 0 rgba(8, 4, 233, 0.24), 0 17px 50px 0 rgba(100, 188, 214, 0.19);
+      }
+    </style>
+    <h2>Fill this up to order customised tshirts</h2>
+</head>
+<body>  
+<form name="myform" action = './receipt.html'>
+<table border="2" cellpadding="15">
+
+<tr>
+<td align="center" colspan="2"><b><i>Add T-shirt details-</i></b></td>
+</tr>    
+
+<tr>
+<td><strong>Tagline on the shirt:</strong></td>
+<td><input type="text" name="Tagline" maxlength="50" placeholder="hello" required/></td>
+</tr> 
+
+<tr>
+<td><strong>Quantity:</strong></td>
+<td><input type="number" name="quantity" maxlength="10" required/></td>
+</tr> 
+
+<tr>
+<td><strong>Color:</strong></td>
+<td><input type="text" name="color" maxlength="20"required/></td>
+</tr> 
+
+<tr>
+<td><strong>Size:</strong></td>
+<td>
+<input type="checkbox" name="Size" value="S"/>Small
+<input type="checkbox" name="Size" value="M" />Medium
+<input type="checkbox" name="Size" value="L" />Long
+<input type="checkbox" name="Size" value="XL" />XL
+</td>
+</tr>
+
+<tr>
+<td><strong>Material:</strong></td>
+<td>
+<input type="radio" name="material" value="Cotton" required/>Cotton
+<input type="radio" name="material" value="Polyester" required/>Polyester
+</td>
+</tr> 
+
+<tr>
+<td><strong>Logo:</strong></td>
+<td>
+<select name="Logo" id="logo">
+<option value=" ">Choose a brand logo</option>
+<option value="Nike">Nike</option>
+<option value="Puma">Puma</option>
+<option value="Addidas">Addidas</option>
+<option value="None">None</option>
+</select>
+</td>
+</tr> 
+
+<tr>
+<td align="center" colspan="2"><b><i>Add shipping details-</i></b></td>   
+</tr>
+
+<tr>
+<td><strong>Shipping address:</strong></td>
+<td><input type="text" name="address" rows="10" cols="20"  maxlength="50" required/></textarea></td>
+</tr> 
+
+<tr>
+<td><strong>Phone number:</strong></td>
+<td><input type="text" name="phonenumber" maxlength="50" required/></td>
+</tr> 
+
+<tr>
+<td><strong>Email-id:</strong></td>
+<td><input type="Email-id" name="email-id" maxlength="50" required/></td>
+</tr> 
+
+<tr>
+<td><strong>Date of delievery:</strong></td>    
+<td><input type="date" id="delievery_date" name="delievery_date" required/></td>
+</tr>
+  -->
+<tr>
+<td colspan="2" align="center">
+<!--<input class="submit" type="submit" value="Submit" onclick="return validateform">-->
+<button class="button" onclick="return validateform()">Submit</button>
+</td>
+</tr>
+
+</table>
+</form>
+
+<script src="validate.js"></script>   
+</body>
+</html>

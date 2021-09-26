@@ -1,9 +1,4 @@
-function myFunction() {
-    //document.getElementById("hello").innerHTML = "Hello World";
-    console.log("hello");
-  }
- 
- function validateform(){
+function validateform(){
     var letterCheck = /^[A-Za-z]+$/;
     var emailCheck= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var phoneCheck=/^\d{10}$/;
@@ -11,9 +6,9 @@ function myFunction() {
     var phoneNo=document.forms["myform"]["phonenumber"];
     var color=document.forms["myform"]["color"];
     var tagline=document.forms["myform"]["Tagline"];
-    var email=document.forms["myform"]["email-id"];
-  // var quantity=document.getElementById("quan");
+    var email=document.forms["myform"]["email-id"]
     var address=document.forms["myform"]["address"];
+     
     if (quantity.value<1){
         alert("Please enter a positive integer");
         return false;
@@ -30,10 +25,10 @@ function myFunction() {
         alert("Please enter a valid email");
         return false;
     }
+    else{
+        return true
+    }
 }
 
-function displayReceipt(){
-    var quantity=document.forms["myform"]["quantity"];
-    document.getElementById("hello").innerHTML=document.forms["myform"]["quantity"];
-}
+
 
